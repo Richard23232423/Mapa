@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #232323; /*232323*/
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Ajustes para la imagen del logo */
+.logo_espace img {
+    max-height: 70px; /* Ajusta la altura máxima del logo */
+    max-width: auto;  /* Mantén la proporción original */
+    display: inline-block;
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-left: 90px;
+}
+
+.uabc-text {
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 300%; 
+    color: white; 
+    margin-left: 10px; 
+    vertical-align: middle; 
+    display: inline-block;
+    font-weight: 600; /* Hace la tipografía más gruesa */
+    margin-left: 20px;
+}
+
+
+
+.navbar {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #232323;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 150000;
+}
+
+#mapContainer {
+    top: 90px;
+    display: flex;
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+    z-index: 10; /* Asegura que el mapa esté detrás de los botones laterales */
+
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.img-responsive{
+    max-width: 85%;
+    align-self: center;
+
+}
+
+.logo_espace{
+    align-items: center;
+
+}
+
+
+.search-input-box {
+    width: 100%; /* Hace que el buscador ocupe todo el ancho */
+}
+
+.container-suggestions li.highlight {
+    background-color: #494a4b; /* Cambia el color de fondo según tu diseño */
+    color: #ccb807dc; /* Cambia el color del texto según tu diseño */
+}
+
+.iconos {
+    height: 30px;
+    width: 30px;
+}
+
+.iconos:hover {
+    background-color: #ebebeb;
+    padding: 15%;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .parte1{
+        align-items: center;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo_espace {
+        padding-left: 25px;
+        align-items: center;
+        margin-bottom: 8px; /* Da un poco de espacio debajo del logo */
+    }
+
+    
+    .search-input-box {
+        width: 300px !important;
+        margin-bottom: 15px;
+        margin-left: 150px;
+    }
+
+    .img-responsive{
+        max-width: 95%;
+        align-self: center;
+    
+    }
+
+    #mapContainer {
+        top: 155px; /* Ajusta este valor según la altura total de la barra de navegación en móvil */
+    }
+}

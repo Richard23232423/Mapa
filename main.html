@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa FIAD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles/styles_barra_navegacion.css">
+    <link rel="stylesheet" href="styles/styles_btn_laterales.css">
+    <link rel="stylesheet" href="styles/styles_panel_derecho.css">
+    <link rel="stylesheet" href="styles/styles_etiquetas.css">
+    <link rel="stylesheet" href="styles/styles_rutas.css"> 
+    <link rel="stylesheet" href="styles/styles_suggestion.css">
+    <script src="https://kit.fontawesome.com/5585023123.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="leaflet-routing-machine.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Barra de navegacion -->
+
+        <nav class="navbar">
+            <div class="logo_espace">
+                <a href="http://fiad.ens.uabc.mx/index.php"><img src="img/logo_FIAD2.png" alt="imagen_logo"/></a>
+                <span class="uabc-text">FIAD</span>
+            </div>
+            
+            <div class="search-input-box">
+                <input type="text" placeholder="¿A dónde quieres ir?" />
+                <a href="#" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass icon"> </i>
+                </a>
+                <ul class="container-suggestions">
+                    <li>sugerencia 1</li>
+                    <li>sugerencia 2</li>
+                    <li>sugerencia 3</li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    <!-- Barra de navegacion -->
+
+
+    <!-- Botones Laterales -->
+    <div class="botones_laterales">
+        <button id="btn_zoom_mas" class="lateral-btn"><ion-icon name="add-outline"></ion-icon></button>
+        <button id="btn_zoom_menos" class="lateral-btn"><ion-icon name="remove-outline"></ion-icon></button><br>
+        <button id="btn_gps" class="lateral-btn"><ion-icon name="locate-outline"></ion-icon></button>
+        <button id="btn_centrar" class="lateral-btn"><ion-icon name="navigate-circle-outline"></ion-icon></button><br>
+        <button id="btn_capas" class="lateral-btn"><ion-icon name="layers-outline"></ion-icon></button>
+    </div>
+    <!-- Botones Laterales -->
+
+    <!-- Mapa --> 
+    <div id="mapContainer">
+        <div id="map"></div>
+    </div>
+
+    <!-- Panel de información -->
+    <div id="panel_informacion" class="panel_informacion">
+        <h1 id="cerrar-panel" class="cerrar-panel">x</h1>
+        <div id="contenedor_panel_info">
+
+            <div class="btn_encabezado">
+                <ul>
+                    <li id="infoTab" class="tablink active">Información</li>
+                    <li id="interiorTab" class="tablink">Plantas</li>
+                    <li id="salonesTab" class="tablink">Listado de Salones</li>
+                </ul>
+            </div>
+
+            <!-- Contenido de Información -->
+            <div id="infoContent" class="tabcontent">
+                <div class="contenedor_edificio_info">
+                    <img id="edificioImagen" src="" alt="" style="width: 100%;"><br>
+                    <h2 id="edificioNombre"></h2>
+                    <p id="edificioInfo"></p>
+                    <button id="btn_direcciones">Como Llegar</button>
+                </div>
+            </div>
+
+            <!-- INTERIOR -->
+            <div id="interiorContent" class="tabcontent" style="display:none;">
+                <img id="interiorImagen" src="" alt="planos" >
+                <div id="floorButtonsContainer" class="floor-buttons"></div>
+            </div>
+
+            <!-- LISTA DE LOS SAOLONES -->
+            <div id="salonesContent" class="tabcontent" style="display:none;">
+                <ul>
+                    <li>sugerencia 1</li>
+                    <li>sugerencia 2</li>
+                    <li>sugerencia 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Fin del Panel de información -->
+
+    
+    
+    <script src="https://unpkg.com/lrm-mapbox/dist/leaflet-routing-mapbox.js"></script>
+    <script src="https://unpkg.com/lrm-openrouteservice/dist/lrm-openrouteservice.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="scripts/script_edificios.js"></script>
+    <script src="scripts/script_panel_derecho.js"></script>
+    <script src="scripts/buscador.js"></script>
+    <script src="scripts/script_barra_responsiva.js"></script>
+    <script src="scripts/script_edificios.js"></script>
+    <script src="scripts/script_capa.js"></script>
+    <script src="scripts/script_ruta.js"></script> 
+    <script src="scripts/script_iconos.js"></script>
+</body>
+</html>

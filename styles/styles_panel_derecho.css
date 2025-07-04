@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.panel_informacion {
+    position: absolute;
+    top: 97px;
+    right: 0;
+    width: 30%;
+    height: 86%;
+    background-color: #232323e7;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    overflow-y: auto;
+    color: #ffffff;
+}
+
+#contenedor_panel_info {
+    background-color: #00000000;
+    padding: 20px;
+    /* border: 5px solid red; */
+}
+
+.cerrar-panel {
+    color:#ffffff;
+    background-color: #00000000;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+.cerrar-panel:hover{
+    background-color: #cf9d126c;
+    border-radius: 5px;
+
+}
+
+
+.btn_encabezado {
+    background-color: #00000000;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#btn_direcciones{
+    font-size: 20px;
+    color: #ffffff;
+    border: 3px solid #1c9122;
+    background-color: #21a527;
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#btn_direcciones:hover{
+    scale: 1.1;
+    background-color: #167e1c;
+}
+
+.btn_encabezado ul {
+    background-color: #00000000;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+}
+
+.btn_encabezado li {
+    background-color: #00000000;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn_encabezado li:hover {
+    border-radius: 5px;
+    background-color: #cf9d126c;
+
+
+}
+
+#interiorImagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#salonesContent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+    list-style-type: none;
+}
+
+#salonesContent  li:hover{
+    background-color: rgb(143, 143, 143);
+
+}
+
+.contenedor_edificio_info {
+    padding: 10px;
+    /* border: 1px solid red; */
+}
+
+.contenedor_edificio_info h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#edificioInfo{
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.info-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.info-detail {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+.info-detail span {
+    display: block;
+    text-align: left;
+}
+
+.info-detail span:first-child {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.contenedor_vacio {
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.tabcontent {
+    display: none;
+    background-color: #00000000;
+
+}
+
+.tabcontent li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.tablink.active {
+    background-color: #00000000;
+
+}
+
+#interiorContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Contenedor de los botones */
+#floorButtonsContainer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilos para los botones de los pisos */
+.floor-button {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 5px; /* Margen entre botones */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+/* Cambiar color al pasar el mouse por encima */
+.floor-button:hover {
+    background-color: #156d19;
+}
+
+/* Estilo para el botón activo (el último clicado) */
+.floor-button.active {
+    background-color: #2e7d32; /* Color diferente cuando está activo */
+}
+
+@media screen and (max-width: 767px) {
+
+    .panel_informacion{
+        display: none;
+        top: 150px;
+        width: 100%;
+        height: 90%;
+        background-color: #232323e7;
+        z-index: 15;
+        overflow-y: auto;
+    }
+}
