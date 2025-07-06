@@ -29,9 +29,9 @@ var edificios = [
             [31.8645938, -116.6673764]
         ],
         info: "Ipsum dolorem id illum quo, dolor labore reprehenderit sed possimus magnam. Rem doloremque earum, officiis dolorum est aliquam accusamus harum reprehenderit necessitatibus?",
-        imagen: "img/Biblioteca_002.jpg",
-        imagen2:"img/Biblioteca_001.jpg",
-        imagen3:"img/Biblioteca_001.jpg",
+        imagen: "../img/Biblioteca_002.jpg",
+        imagen2:"../img/Biblioteca_001.jpg",
+        imagen3:"../img/Biblioteca_001.jpg",
         pisos: 2,
         salones:["SALONES PLANTA BAJA","Salon 1","Salon 2","Salon 3"]
     },
