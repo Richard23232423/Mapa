@@ -577,7 +577,7 @@ var edificios = [
             [31.8655744, -116.6667483]
         ],
         info: "Ipsum dolorem id illum quo, dolor labore reprehenderit sed possimus magnam. Rem doloremque earum, officiis dolorum est aliquam accusamus harum reprehenderit necessitatibus?",
-        imagen: "/img/Edificio E40.jpg",
+        imagen: "/img/Edificio40.jpg",
         imagen2: "img/plano.png",
         imagen3: "img/plano.png",
         imagen4: "img/plano.png",
